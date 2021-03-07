@@ -2,8 +2,8 @@
 set -euxo pipefail
 
 dockutil --no-restart --remove all
-dockutil --no-restart --add "/System/Applications/Slack.app"
-dockutil --no-restart --add "/System/Applications/Brave.app"
-dockutil --no-restart --add "/System/Applications/iTerm.app"
+dockutil --no-restart --add "/Applications/Slack.app"
+dockutil --no-restart --add "/Applications/Brave Browser.app"
+dockutil --no-restart --add "/Applications/iTerm.app"
 
 killall Dock
