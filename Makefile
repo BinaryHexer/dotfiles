@@ -48,6 +48,7 @@ stow-linux: core-linux
 	is-executable stow || apt-get -y install stow
 
 brew-packages: brew
+	brew analytics off
 	brew bundle --file=$(DOTFILES_DIR)/install/homebrew/Brewfile
 
 cask-apps: brew

@@ -1,3 +1,4 @@
+# find (using ripgrep & peco) and open file in vim
 function vrg
   set EX_CMD (
         set FL 0

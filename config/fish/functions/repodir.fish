@@ -1,3 +1,4 @@
+# find `repo` in `~/dev`
 function repodir
     set repo_base ~/dev
     set repo_path (find "$repo_base" -mindepth 2 -maxdepth 2 -type d -name "*$argv*" | head -n 1)

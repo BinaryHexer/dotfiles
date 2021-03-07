@@ -6,7 +6,7 @@ Dotfiles customized for macOS setup.
 
 1. (Optional) To initialize gcloud sdk and kubectl config, set the following env vars (replace the values as required):
 ```sh
-export GCP_REGION="asia-east-1"
+export GCP_REGION="asia-east1"
 export GCP_CLUSTERS=(cluster-1 cluster-2)
 export GCP_PROJECTS=(project-1 project-2)
 ```
