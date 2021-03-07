@@ -10,6 +10,7 @@ style = "bold yellow"
 truncate_to_repo = false
 truncation_symbol = "…/"
 style = "bold green"
+read_only = " "
 
 [git_commit]
 commit_hash_length = 7
@@ -19,11 +20,13 @@ disabled = false
 
 [kubernetes]
 disabled = false
-style = "bold yellow"
+symbol = "⎈ "
+style = "bold #326ce5"
 
 [gcloud]
 disabled = false
-symbol = "🅶🅲🅿"
+symbol = "🅶🅲🅿 "
+style = "bold #4285F4"
 
 [gcloud.region_aliases]
 us-central1 = "uc1"
@@ -33,3 +36,60 @@ asia-northeast1 = "an1"
 disabled = false
 use_12hr = false
 utc_time_offset = "+9"
+
+[dart]
+symbol = " "
+
+[docker]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "
