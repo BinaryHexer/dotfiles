@@ -1,0 +1,55 @@
+####################
+# Taps
+####################
+
+# Homebrew
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+
+####################
+# Formulae / Casks
+####################
+
+# Browsers
+cask "brave-browser"
+cask "firefox"
+cask "firefox-developer-edition"
+cask "google-chrome"
+
+# Chat / IM
+cask "slack"
+
+# Cloud Providers / Platforms
+cask "google-cloud-sdk"
+
+# Editors
+cask "jetbrains-toolbox"
+cask "vscodium"
+
+# Fonts
+cask "font-anonymous-pro"
+cask "font-fira-code"
+cask "font-fira-mono"
+cask "font-fira-sans"
+cask "font-ibm-plex"
+cask "font-inconsolata"
+cask "font-iosevka"
+
+# System related
+cask "osxfuse"
+
+# Terminals
+cask "iterm2"
+
+# Misc
+cask "alfred"
+cask "cheatsheet"
+cask "docker"
+cask "hammerspoon"
+cask "postman"
+cask "stand"
+cask "stats"
+
+# App Store

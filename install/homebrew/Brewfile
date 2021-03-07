@@ -1,0 +1,121 @@
+####################
+# Taps
+####################
+
+# Homebrew
+tap "homebrew/bundle"
+tap "homebrew/core"
+tap "homebrew/services"
+
+####################
+# Formulae / Casks
+####################
+
+# Compression & decompression
+brew "bzip2", link: true
+brew "gzip"
+brew "libzip"
+brew "p7zip"
+brew "zstd"
+
+# DevOps & Kubernetes
+brew "ansible"
+brew "k9s"
+brew "kubernetes-cli"
+brew "kubie"
+brew "stern"
+brew "terraform"
+brew "tflint"
+
+# Downloaders
+brew "curl", link: true
+brew "mas"
+brew "wget"
+
+# Editors
+brew "bat"
+brew "less"
+brew "most"
+brew "vim"
+
+# Encryption
+brew "bcrypt"
+brew "scrypt"
+
+# File Sync
+brew "rsync"
+
+# GNU tools
+brew "binutils"
+brew "coreutils"
+brew "diffutils"
+brew "ed"
+brew "findutils"
+brew "gawk"
+brew "gnu-indent"
+brew "gnu-sed"
+brew "gnu-tar"
+brew "gnu-which"
+brew "gnupg"
+brew "gnutls"
+brew "gpatch"
+brew "gzip"
+brew "m4"
+brew "make"
+brew "nano"
+brew "watch"
+brew "wdiff"
+
+# Languages
+brew "elm"
+brew "go"
+brew "haskell-stack"
+brew "lua"
+brew "node"
+brew "openjdk"
+brew "openjdk@8"
+brew "php"
+brew "python"
+brew "ruby"
+brew "rust"
+
+# Language Tools
+brew "bats"
+brew "cloc"
+brew "gradle"
+brew "maven"
+brew "shellcheck"
+
+# Shells
+brew "bash"
+brew "fish"
+
+# Shell Utils
+brew "starship"
+
+# System related
+brew "automake"
+brew "broot"
+brew "dockutil"
+brew "fd"
+brew "fzf"
+brew "gpg"
+brew "openssl"
+brew "stow"
+brew "tree"
+
+# Text Search / Manipulation
+brew "grep"
+brew "jq"
+brew "peco"
+brew "ripgrep"
+brew "yq"
+
+# Version Control
+brew "git"
+brew "git-extras"
+
+# Misc
+brew "graphviz"
+brew "grc"
+brew "thefuck"

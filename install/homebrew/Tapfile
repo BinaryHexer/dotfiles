@@ -1,0 +1,21 @@
+####################
+# Taps
+####################
+
+# Others
+tap "cuelang/tap"
+tap "datawire/blackbird"
+tap "starkandwayne/cf"
+
+####################
+# Formulae / Casks
+####################
+
+# DevOps & Kubernetes
+brew "datawire/blackbird/telepresence"
+
+# Languages
+brew "cuelang/tap/cue"
+
+# Text Search / Manipulation
+brew "starkandwayne/cf/spruce"

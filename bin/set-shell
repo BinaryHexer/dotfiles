@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+NEW_SHELL=$1
+
+set_shell() {
+    if grep --quiet "${NEW_SHELL}" <<<"$SHELL"; then
+        echo "${NEW_SHELL} shell is already set up."
+    else
+        echo "Adding ${NEW_SHELL} executable to /etc/shells"
+        if grep --fixed-strings --line-regexp --quiet "/usr/local/bin/${NEW_SHELL}" /etc/shells; then
+            echo "${NEW_SHELL} executable already exists in /etc/shells."
+        else
+            if sudo bash -c "echo /usr/local/bin/${NEW_SHELL} >> /etc/shells"; then
+                echo "${NEW_SHELL} executable added to /etc/shells."
+            else
+                echo "Failed adding ${NEW_SHELL} executable to /etc/shells."
+                return 1
+            fi
+        fi
+        echo "Changing shell to ${NEW_SHELL}"
+        if chsh -s "/usr/local/bin/${NEW_SHELL}"; then
+            echo "Changed shell to ${NEW_SHELL}"
+        else
+            echo "Failed changing shell to ${NEW_SHELL}"
+            return 2
+        fi
+        echo "Running fish initial setup"
+        fish -c "setup"
+    fi
+}
+
+if set_shell; then
+    echo "Successfully set up ${NEW_SHELL} shell."
+else
+    echo "Failed setting up ${NEW_SHELL} shell."
+fi

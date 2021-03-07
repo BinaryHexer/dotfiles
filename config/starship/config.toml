@@ -1,0 +1,35 @@
+[[battery.display]]  # "bold red" style when capacity is between 0% and 20%
+threshold = 20
+style = "bold red"
+
+[[battery.display]]  # "bold yellow" style when capacity is between 20% and 50%
+threshold = 50
+style = "bold yellow"
+
+[directory]
+truncate_to_repo = false
+truncation_symbol = "…/"
+style = "bold green"
+
+[git_commit]
+commit_hash_length = 7
+only_detached = false
+tag_disabled = false
+disabled = false
+
+[kubernetes]
+disabled = false
+style = "bold yellow"
+
+[gcloud]
+disabled = false
+symbol = "🅶🅲🅿"
+
+[gcloud.region_aliases]
+us-central1 = "uc1"
+asia-northeast1 = "an1"
+
+[time]
+disabled = false
+use_12hr = false
+utc_time_offset = "+9"
