@@ -8,7 +8,7 @@ else
 
     for project in ${GCP_PROJECTS}; do
         for cluster in ${GCP_CLUSTERS}; do
-            gcloud container clusters get-credentials "${cluster}" --project "${project}" --region "${GCP_REGION}"
+            gcloud container clusters get-credentials "${cluster}" --project "${project}" --region "${GCP_REGION}" || true
         done
     done
 fi

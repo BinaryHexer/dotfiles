@@ -23,6 +23,9 @@ set -x -g KUBECONFIG ~/.config/kube/config.yaml
 # Init thefuck
 thefuck --alias | source
 
+# Gcloud
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+
 # Change the default location of starship config
 set -x -g STARSHIP_CONFIG ~/.config/starship/config.toml
 
