@@ -30,11 +30,12 @@ cask "vscodium"
 
 # Fonts
 cask "font-anonymous-pro"
+cask "font-blex-mono-nerd-font"
+cask "font-fira-code-nerd-font"
 cask "font-fira-code"
 cask "font-fira-mono"
 cask "font-fira-sans"
 cask "font-ibm-plex"
-cask "font-blex-mono-nerd-font"
 cask "font-inconsolata"
 cask "font-iosevka"
 
