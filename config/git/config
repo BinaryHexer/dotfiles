@@ -2,7 +2,7 @@
         name = Vijayender Joshi
         email = vijayender.joshi@gmail.com
 [core]
-        excludesfile = ~/.gitignore
+        excludesfile = ~/.config/git/ignore
         autocrlf = input
 
 # Enforce SSH
