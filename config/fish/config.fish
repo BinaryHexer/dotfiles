@@ -26,6 +26,9 @@ thefuck --alias | source
 # Gcloud
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 
+# GPG
+set -x -g GPG_TTY (tty)
+
 # Change the default location of starship config
 set -x -g STARSHIP_CONFIG ~/.config/starship/config.toml
 
