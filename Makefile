@@ -1,7 +1,8 @@
 SHELL = /bin/bash
 DOTFILES_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
+export PATH := $(DOTFILES_DIR)/bin:/opt/homebrew/bin:$(PATH)
 OS := $(shell bin/is-supported bin/is-macos macos linux)
-PATH := $(DOTFILES_DIR)/bin:/opt/homebrew/bin:$(PATH)
+SHELL := env PATH=$(PATH) /bin/bash
 NEW_SHELL := fish
 
 export XDG_CONFIG_HOME = $(HOME)/.config
@@ -54,8 +55,7 @@ brew-packages: brew
 cask-apps: brew
 	brew bundle --file=$(DOTFILES_DIR)/install/homebrew/Caskfile || true
 	brew bundle --file=$(DOTFILES_DIR)/install/homebrew/Tapfile || true
-	sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
-	sudo ln -sfn /usr/local/opt/openjdk@8/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-8.jdk
+	./install/macos/java.sh || true
 	defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
 	for EXT in $$(cat install/vscodium/extensions); do code --install-extension $$EXT; done
 
