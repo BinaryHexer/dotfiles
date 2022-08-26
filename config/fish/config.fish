@@ -24,7 +24,7 @@ set -x -g KUBECONFIG ~/.config/kube/config.yaml
 thefuck --alias | source
 
 # Gcloud
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+#source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 
 # GPG
 set -x -g GPG_TTY (tty)
