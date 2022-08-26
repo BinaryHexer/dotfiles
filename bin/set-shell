@@ -2,16 +2,21 @@
 set -euo pipefail
 
 NEW_SHELL=$1
+SHELL_PATH="/usr/local/bin"
 
 set_shell() {
+    if [[ $(uname -m) == 'arm64' ]]; then
+      SHELL_PATH="/opt/homebrew/bin"
+    fi
+
     if grep --quiet "${NEW_SHELL}" <<<"$SHELL"; then
         echo "${NEW_SHELL} shell is already set up."
     else
         echo "Adding ${NEW_SHELL} executable to /etc/shells"
-        if grep --fixed-strings --line-regexp --quiet "/usr/local/bin/${NEW_SHELL}" /etc/shells; then
+        if grep --fixed-strings --line-regexp --quiet "${SHELL_PATH}/${NEW_SHELL}" /etc/shells; then
             echo "${NEW_SHELL} executable already exists in /etc/shells."
         else
-            if sudo bash -c "echo /usr/local/bin/${NEW_SHELL} >> /etc/shells"; then
+            if sudo bash -c "echo ${SHELL_PATH}/${NEW_SHELL} >> /etc/shells"; then
                 echo "${NEW_SHELL} executable added to /etc/shells."
             else
                 echo "Failed adding ${NEW_SHELL} executable to /etc/shells."
@@ -19,7 +24,7 @@ set_shell() {
             fi
         fi
         echo "Changing shell to ${NEW_SHELL}"
-        if chsh -s "/usr/local/bin/${NEW_SHELL}"; then
+        if chsh -s "${SHELL_PATH}/${NEW_SHELL}"; then
             echo "Changed shell to ${NEW_SHELL}"
         else
             echo "Failed changing shell to ${NEW_SHELL}"
