@@ -3,10 +3,10 @@ set -x -g LC_ALL en_GB.UTF-8
 set -x -g LANG en_GB.UTF-8
 
 # Set PATH
-set -x -g PATH ~/bin /usr/local/bin /usr/local/sbin $PATH
+set -x -g PATH ~/bin /usr/local/bin /usr/local/sbin /opt/homebrew/bin $PATH
 
 # JAVA
-set -x -g JAVA_8_HOME (/usr/libexec/java_home -v1.8)
+#set -x -g JAVA_8_HOME (/usr/libexec/java_home -v1.8)
 set -x -g JAVA_LT_HOME (/usr/libexec/java_home -v11)
 
 # GO

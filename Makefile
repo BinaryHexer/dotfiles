@@ -1,7 +1,7 @@
 SHELL = /bin/bash
 DOTFILES_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 OS := $(shell bin/is-supported bin/is-macos macos linux)
-PATH := $(DOTFILES_DIR)/bin:$(PATH)
+PATH := $(DOTFILES_DIR)/bin:/opt/homebrew/bin:$(PATH)
 NEW_SHELL := fish
 
 export XDG_CONFIG_HOME = $(HOME)/.config

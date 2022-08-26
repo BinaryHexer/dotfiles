@@ -40,7 +40,7 @@ cask "font-inconsolata"
 cask "font-iosevka"
 
 # System related
-cask "osxfuse"
+cask "macfuse"
 
 # Terminals
 cask "iterm2"
