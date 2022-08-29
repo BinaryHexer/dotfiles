@@ -7,7 +7,7 @@ set -x -g PATH ~/bin /usr/local/bin /usr/local/sbin $PATH
 
 # Homebrew is installed on different path on Apple Silicon
 set aarch (uname -m)
-if test aarch = 'arm64'
+if test $aarch = 'arm64'
     set -x -g PATH /opt/homebrew/bin $PATH
 end
 
@@ -30,7 +30,7 @@ set -x -g KUBECONFIG ~/.config/kube/config.yaml
 thefuck --alias | source
 
 # Gcloud
-if test aarch = 'arm64'
+if test $aarch = 'arm64'
     source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 else
     source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
