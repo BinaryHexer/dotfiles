@@ -40,7 +40,7 @@ utc_time_offset = "+9"
 [dart]
 symbol = " "
 
-[docker]
+[docker_context]
 symbol = " "
 
 [elixir]
